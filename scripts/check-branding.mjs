@@ -28,7 +28,7 @@ const ALLOWED_FILES = new Set([
   'scripts/check-branding.mjs',
 ]);
 
-// Forbidden patterns representing the legacy project identity
+// Restricted patterns associated with the legacy project identity
 const FORBIDDEN_PATTERNS = [
   /@django-js\b/gi,
   /django-js\b/gi,
@@ -111,6 +111,6 @@ if (violations.length > 0) {
   }
   process.exit(1);
 } else {
-  console.log('✅ Branding check passed! Zero legacy framework references found.');
+  console.log('✅ Branding validation passed! No legacy framework references detected.');
   process.exit(0);
 }
